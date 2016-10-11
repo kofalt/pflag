@@ -767,7 +767,7 @@ func (f *FlagSet) parseLongArg(s string, args []string) (a []string, err error) 
 			f.usage()
 			return a, ErrHelp
 		}
-		err = f.failf("unknown flag: --%s", name)
+		// err = f.failf("unknown flag: --%s", name)
 		return
 	}
 	var value string
@@ -806,7 +806,7 @@ func (f *FlagSet) parseSingleShortArg(shorthands string, args []string) (outShor
 			return
 		}
 		//TODO continue on error
-		err = f.failf("unknown shorthand flag: %q in -%s", c, shorthands)
+		// err = f.failf("unknown shorthand flag: %q in -%s", c, shorthands)
 		return
 	}
 	var value string
